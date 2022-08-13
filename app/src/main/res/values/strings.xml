@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Matches Project</string>
+    <string name="addmatch">Hello, You can add match here</string>
 </resources>

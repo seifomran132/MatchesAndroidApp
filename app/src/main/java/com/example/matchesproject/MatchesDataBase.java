@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
+
 public class MatchesDataBase extends SQLiteOpenHelper {
 
     private static String db_name = "matchesDB";
@@ -43,19 +45,32 @@ public class MatchesDataBase extends SQLiteOpenHelper {
 
     }
 
-    public Cursor getMatches() {
-        Cursor c;
+    public ArrayList<Match> getMatches() {
 
+        ArrayList<Match> matchesArr = new ArrayList<>();
+
+        Cursor c;
         myDB = getReadableDatabase();
         String[] rowDetails = {"firstteam", "secondteam", "matchtime", "champ"};
 
         c = myDB.query("matches", rowDetails, null, null, null, null, null);
 
-        if(c!=null) {
-            c.moveToFirst();
+        if(c.moveToFirst()) {
+            do{
+                String firstTeamName = c.getString(0);
+                String secondTeamName = c.getString(1);
+                String matchTime = c.getString(2);
+                String champ = c.getString(3);
+
+                Match tempMatch = new Match(firstTeamName, secondTeamName, matchTime, champ);
+
+                matchesArr.add(tempMatch);
+
+            }
+            while(c.moveToNext());
         }
         myDB.close();
-        return c;
+        return matchesArr;
     }
 
 }
