@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
+
 public class TopPlayerDataBase extends SQLiteOpenHelper {
 
     private static String db_name = "topplayerDB";
@@ -29,7 +31,7 @@ public class TopPlayerDataBase extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public Cursor getGoalsAndAssists(){
+    /*public Cursor getGoalsAndAssists(){
         myDB=getReadableDatabase();
         Cursor cursor = myDB.rawQuery("Select * from topplayer",null);
         if(cursor.getCount() != 0)
@@ -40,8 +42,8 @@ public class TopPlayerDataBase extends SQLiteOpenHelper {
         }
         myDB.close();
         return null;
-    }
-    /*public ArrayList<PlayersDetails> getGoalsAndAssists() {
+    }*/
+    public ArrayList<PlayersDetails> getGoalsByOrder() {
 
         ArrayList<PlayersDetails> PLayersArr = new ArrayList<>();
 
@@ -49,8 +51,8 @@ public class TopPlayerDataBase extends SQLiteOpenHelper {
         myDB = getReadableDatabase();
         String[] rowDetails = {"playername","goals","assits"};
 
-        c = myDB.query("topplayer", rowDetails, null, null, null, null, null);
-
+        c = myDB.query("topplayer", rowDetails, null, null, null,
+                null, "goals");
         if(c.moveToFirst()) {
             do{
                 String PlayerName = c.getString(0);
@@ -66,6 +68,34 @@ public class TopPlayerDataBase extends SQLiteOpenHelper {
         }
         myDB.close();
         return PLayersArr;
-    }*/
+    }
+
+
+    public ArrayList<PlayersDetails> getAssitsByOrder() {
+
+        ArrayList<PlayersDetails> PLayersArr1 = new ArrayList<>();
+
+        Cursor c1;
+        myDB = getReadableDatabase();
+        String[] rowDetails = {"playername","goals","assits"};
+
+        c1 = myDB.query("topplayer", rowDetails, null, null, null,
+                null, "assits");
+        if(c1.moveToFirst()) {
+            do{
+                String PlayerName = c1.getString(0);
+                int Goals = c1.getInt(1);
+                int Assists = c1.getInt(2);
+
+                PlayersDetails tempPlayer = new PlayersDetails(PlayerName, Goals, Assists);
+
+                PLayersArr1.add(tempPlayer);
+
+            }
+            while(c1.moveToNext());
+        }
+        myDB.close();
+        return PLayersArr1;
+    }
 
 }

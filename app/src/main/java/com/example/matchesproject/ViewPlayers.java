@@ -8,6 +8,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 public class ViewPlayers extends AppCompatActivity {
 
     @Override
@@ -28,16 +31,21 @@ public class ViewPlayers extends AppCompatActivity {
 
         TopPlayerDataBase players = new TopPlayerDataBase(getApplicationContext());
 
-
-
-        Cursor cur = players.getGoalsAndAssists();
-
-        //ArrayList<PlayersDetails> PlayersList = players.getGoalsAndAssists();
-        //System.out.println(PlayersList);
-
         PlayersDetails pl = new PlayersDetails();
 
-        if(cur != null) {
+        //Cursor cur = players.getGoalsAndAssists();
+
+        ArrayList<PlayersDetails> PlayersList = players.getGoalsByOrder();
+        Iterator itr = PlayersList.iterator();
+
+
+        while(itr.hasNext()) {
+            Object element = itr.next();
+            GoalsAdapter.add(PlayersList.get(0).getPlayerName());
+        }
+
+
+        /*if(cur != null) {
             while (!cur.isAfterLast()) {
 
                 pl.setPlayerName(cur.getString(0));
@@ -58,6 +66,6 @@ public class ViewPlayers extends AppCompatActivity {
         else
         {
             Toast.makeText(getApplicationContext(),"no database",Toast.LENGTH_LONG).show();
-        }
+        }*/
     }
 }
