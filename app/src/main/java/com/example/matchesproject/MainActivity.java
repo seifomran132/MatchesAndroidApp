@@ -18,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+
         // Seif Wael
         Button search=(Button) findViewById(R.id.topPlayersBtn);
         search.setOnClickListener(new View.OnClickListener() {
@@ -28,7 +31,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        TopPlayerDataBase topDB = new TopPlayerDataBase(getApplicationContext());
+
+
+
+
+
+
+
+/*
+
+TopPlayerDataBase topDB = new TopPlayerDataBase(getApplicationContext());
 
         Button viewBtn = findViewById(R.id.viewMatchesBtn);
         Button addBtn = findViewById(R.id.addBtn);
@@ -60,13 +72,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Intent myIntent = new Intent(this, addPlayer.class);
+        startActivity(myIntent);
 
-
-        //Intent myIntent = new Intent(this, addMatch.class);
-        //startActivity(myIntent);
-
-
-/*
         MatchesDataBase mdb = new MatchesDataBase(getApplicationContext());
 
 

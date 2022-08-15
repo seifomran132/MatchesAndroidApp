@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MatchesProject">
+        <activity android:name=".addPlayer"></activity>
         <activity
             android:name=".ViewPlayers"
             android:exported="false" />
