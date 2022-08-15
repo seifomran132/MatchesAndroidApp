@@ -33,6 +33,11 @@ public class ViewPlayers extends AppCompatActivity {
 
         PlayersDetails pl = new PlayersDetails();
 
+        PlayersDetails p2 = new PlayersDetails("Seif", 10, 3);
+        players.addPlayer(p2);
+
+
+
         //Cursor cur = players.getGoalsAndAssists();
 
         ArrayList<PlayersDetails> PlayersList = players.getGoalsByOrder();

@@ -36,5 +36,14 @@ public class PlayersDetails {
     public void setGoals(int goals) {
         Goals = goals;
     }
+
+    @Override
+    public String toString() {
+        return "PlayersDetails{" +
+                "PlayerName='" + PlayerName + '\'' +
+                ", Assists=" + Assists +
+                ", Goals=" + Goals +
+                '}';
+    }
 }
 

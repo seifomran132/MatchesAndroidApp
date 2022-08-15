@@ -28,6 +28,37 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        TopPlayerDataBase topDB = new TopPlayerDataBase(getApplicationContext());
+
+        Button viewBtn = findViewById(R.id.viewMatchesBtn);
+        Button addBtn = findViewById(R.id.addBtn);
+
+        viewBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                ArrayList<PlayersDetails> players = new ArrayList<>();
+                players = topDB.getGoalsByOrder();
+
+                System.out.println(players);
+
+
+            }
+        });
+
+
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                PlayersDetails p1 = new PlayersDetails("Seif", 20, 6);
+                topDB.addPlayer(p1);
+
+
+
+            }
+        });
 
 
 

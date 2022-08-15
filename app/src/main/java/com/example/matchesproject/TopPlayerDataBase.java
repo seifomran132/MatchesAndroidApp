@@ -43,6 +43,20 @@ public class TopPlayerDataBase extends SQLiteOpenHelper {
         myDB.close();
         return null;
     }*/
+
+    public void addPlayer(PlayersDetails p) {
+        ContentValues row = new ContentValues();
+        row.put("playername", p.getPlayerName());
+        row.put("goals", p.getGoals());
+        row.put("assits", p.getAssists());
+
+        myDB = getWritableDatabase();
+        myDB.insert("topplayer", null, row);
+
+        myDB.close();
+
+    }
+
     public ArrayList<PlayersDetails> getGoalsByOrder() {
 
         ArrayList<PlayersDetails> PLayersArr = new ArrayList<>();
