@@ -4,15 +4,15 @@ public class Transfere {
     private String plyarName;
     private String newClub;
     private String oldClub;
-    private float oldSalary;
+    private float transferCost;
     private float NewSalary;
     private String contractDate;
 
-    public Transfere(String plyarName, String newClub, String oldClub, float oldSalary, float newSalary, String contractDate) {
+    public Transfere(String plyarName, String newClub, String oldClub, float transferCost, float newSalary, String contractDate) {
         this.plyarName = plyarName;
         this.newClub = newClub;
         this.oldClub = oldClub;
-        this.oldSalary = oldSalary;
+        this.transferCost = transferCost;
         NewSalary = newSalary;
         this.contractDate = contractDate;
     }
@@ -41,12 +41,12 @@ public class Transfere {
         this.oldClub = oldClub;
     }
 
-    public float getOldSalary() {
-        return oldSalary;
+    public float getTransferCost() {
+        return transferCost;
     }
 
-    public void setOldSalary(float oldSalary) {
-        this.oldSalary = oldSalary;
+    public void setTransferCost(float transferCost) {
+        this.transferCost = transferCost;
     }
 
     public float getNewSalary() {
@@ -63,5 +63,17 @@ public class Transfere {
 
     public void setContractDate(String contractDate) {
         this.contractDate = contractDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Transfere{" +
+                "plyarName='" + plyarName + '\'' +
+                ", newClub='" + newClub + '\'' +
+                ", oldClub='" + oldClub + '\'' +
+                ", transferCost=" + transferCost +
+                ", NewSalary=" + NewSalary +
+                ", contractDate='" + contractDate + '\'' +
+                '}';
     }
 }
