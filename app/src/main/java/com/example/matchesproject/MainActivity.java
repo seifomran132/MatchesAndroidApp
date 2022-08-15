@@ -18,7 +18,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        // Seif Wael
+        Button search=(Button) findViewById(R.id.topPlayersBtn);
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent playersData = new Intent(MainActivity.this,ViewPlayers.class);
+                startActivity(playersData);
+            }
+        });
 
 
         //Intent myIntent = new Intent(this, addMatch.class);

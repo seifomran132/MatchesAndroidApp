@@ -2,6 +2,7 @@ package com.example.matchesproject;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -28,5 +29,43 @@ public class TopPlayerDataBase extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    public Cursor getGoalsAndAssists(){
+        myDB=getReadableDatabase();
+        Cursor cursor = myDB.rawQuery("Select * from topplayer",null);
+        if(cursor.getCount() != 0)
+        {
+            cursor.moveToFirst();
+            myDB.close();
+            return cursor;
+        }
+        myDB.close();
+        return null;
+    }
+    /*public ArrayList<PlayersDetails> getGoalsAndAssists() {
+
+        ArrayList<PlayersDetails> PLayersArr = new ArrayList<>();
+
+        Cursor c;
+        myDB = getReadableDatabase();
+        String[] rowDetails = {"playername","goals","assits"};
+
+        c = myDB.query("topplayer", rowDetails, null, null, null, null, null);
+
+        if(c.moveToFirst()) {
+            do{
+                String PlayerName = c.getString(0);
+                int Goals = c.getInt(1);
+                int Assists = c.getInt(2);
+
+                PlayersDetails tempPlayer = new PlayersDetails(PlayerName, Goals, Assists);
+
+                PLayersArr.add(tempPlayer);
+
+            }
+            while(c.moveToNext());
+        }
+        myDB.close();
+        return PLayersArr;
+    }*/
 
 }
