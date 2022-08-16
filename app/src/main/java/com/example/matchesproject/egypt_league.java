@@ -21,64 +21,14 @@ public class egypt_league extends AppCompatActivity {
         setContentView(R.layout.activity_egypt_league);
 
 
-        MatchesDataBase obj =new MatchesDataBase(this);
-        egypt_league.addtolist add = new egypt_league.addtolist(obj.getMatches());
+        MatchesDataBase matchesDB = new MatchesDataBase(this);
+        ArrayList<Match> egyptianMatches = new ArrayList<Match>();
+        ListView egyList = (ListView) findViewById(R.id.egyptlist);
 
-        ArrayList<Match> egypt_Match =new ArrayList<Match>();
+        egyptianMatches = OurUtilities.filterMatches("egyptian league", matchesDB.getMatches());
 
+        CustomMatchesAdapter myAdapter = new CustomMatchesAdapter(this, R.layout.adapter_matchlist, egyptianMatches);
 
-        for (int i=0 ;i<add.getCount();i++){
-            if (add.getItem(i).equals("egyptian league")) {
-                egypt_Match = add.mat;
-            }
-        }
-
-
-        ListView egypt_list =(ListView)findViewById(R.id.egyptlist);
-
-
-
-        egypt_list.setAdapter((ListAdapter) egypt_Match);
-
-
-
-
-    }
-    class addtolist extends BaseAdapter {
-        ArrayList<Match> mat = new ArrayList<Match>();
-
-        public addtolist(ArrayList<Match> m){
-            this.mat=m;
-        }
-
-        @Override
-        public int getCount() {
-            return mat.size();
-        }
-
-        @Override
-        public Object getItem(int i) {
-            return mat.get(i).getChamp().toString();
-        }
-
-        @Override
-        public long getItemId(int i) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int i, View view, ViewGroup viewGroup) {
-            LayoutInflater lay = getLayoutInflater();
-            View vw =lay.inflate(R.layout.adapter_matchlist,null);
-            TextView txt_f=(TextView)vw.findViewById(R.id.firstteam);
-            TextView txt_s=(TextView)vw.findViewById(R.id.secondteam);
-            // score ya omran  TextView txt_score=(TextView)vw.findViewById(R.id.score);
-            TextView txt_t=(TextView)vw.findViewById(R.id.time);
-            txt_f.setText(mat.get(i).getFirstTeam().toString());
-            txt_s.setText(mat.get(i).getSecondTeam().toString());
-            //score ya omran txt_score.setText(mat.get(i).score.toString());
-            txt_t.setText(mat.get(i).getMatchTime().toString());
-            return vw;
-        }
+        egyList.setAdapter(myAdapter);
     }
 }

@@ -29,6 +29,11 @@ public class MainActivity extends AppCompatActivity {
         prembtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                MatchesDataBase mdb = new MatchesDataBase(getApplicationContext());
+                Match m = new Match("Barca", "Real", "10:00", "premier league");
+                mdb.createMatch(m);
+
                 Intent in =new Intent(getApplicationContext(),premier_league.class);
                 startActivity(in);
             }
@@ -39,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent in =new Intent(getApplicationContext(),egypt_league.class);
                 startActivity(in);
+                MatchesDataBase mdb = new MatchesDataBase(getApplicationContext());
+                Match m = new Match("Barca", "Real", "10:00", "egyptian league");
+                mdb.createMatch(m);
             }
         });
 
@@ -47,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent in =new Intent(getApplicationContext(),laliga_league.class);
                 startActivity(in);
+                MatchesDataBase mdb = new MatchesDataBase(getApplicationContext());
+                Match m = new Match("Barca", "Real", "10:00", "laliga");
+                mdb.createMatch(m);
             }
         });
 
@@ -55,6 +66,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent in =new Intent(getApplicationContext(),UEFA_champ.class);
                 startActivity(in);
+                MatchesDataBase mdb = new MatchesDataBase(getApplicationContext());
+                Match m = new Match("Barca", "Real", "10:00", "uefa");
+                mdb.createMatch(m);
             }
         });
 
