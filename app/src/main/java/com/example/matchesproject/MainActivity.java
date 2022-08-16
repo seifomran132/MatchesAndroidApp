@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -19,17 +20,45 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        ImageButton prembtn = (ImageButton) findViewById(R.id.premiuerbtn);
+        ImageButton egybtn = (ImageButton) findViewById(R.id.egybtn);
+        ImageButton laligabtn = (ImageButton) findViewById(R.id.labtn);
+        ImageButton uefabtn = (ImageButton) findViewById(R.id.uefa_btn);
 
 
-        // Seif Wael
-        Button search=(Button) findViewById(R.id.topPlayersBtn);
-        search.setOnClickListener(new View.OnClickListener() {
+        prembtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent playersData = new Intent(MainActivity.this,ViewPlayers.class);
-                startActivity(playersData);
+                Intent in =new Intent(getApplicationContext(),premier_league.class);
+                startActivity(in);
             }
         });
+
+        egybtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in =new Intent(getApplicationContext(),egypt_league.class);
+                startActivity(in);
+            }
+        });
+
+        laligabtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in =new Intent(getApplicationContext(),laliga_league.class);
+                startActivity(in);
+            }
+        });
+
+        uefabtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in =new Intent(getApplicationContext(),UEFA_champ.class);
+                startActivity(in);
+            }
+        });
+
+
 
 
 

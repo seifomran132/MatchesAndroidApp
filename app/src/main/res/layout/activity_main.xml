@@ -6,35 +6,127 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/viewMatchesBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="View Matches"
+    <TextView
+        android:id="@+id/latext"
+        android:layout_width="300px"
+        android:layout_height="39dp"
+        android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
+        android:paddingLeft="35dp"
+        android:text="la liga"
+        android:textSize="17dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labtn"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/labtn"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.278" />
+        app:srcCompat="@drawable/laliga"
+        tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/addBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="AddMatch"
+    <ImageButton
+        android:id="@+id/uefa_btn"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/uefa_champions"
+        tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/topPlayersBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="133dp"
-        android:layout_marginBottom="179dp"
-        android:text="View Players"
+    <TextView
+        android:id="@+id/uefatext"
+        android:layout_width="300px"
+        android:layout_height="39dp"
+        android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
+        android:paddingLeft="30dp"
+        android:text="UEFA
+        champions"
+        android:textSize="17dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uefa_btn"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/egytext"
+        android:layout_width="300px"
+        android:layout_height="39dp"
+        android:layout_marginBottom="424dp"
+        android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
+        android:paddingLeft="21dp"
+        android:textStyle="bold"
+        android:text="egyptian league"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/egybtn"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/premiuerbtn"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096"
+        app:srcCompat="@drawable/premiuerleague"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/premiuertext"
+        android:layout_width="300px"
+        android:layout_height="39dp"
+        android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
+        android:paddingLeft="21dp"
+        android:text="premiuer league"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/premiuerbtn"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/egybtn"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096"
+        app:srcCompat="@drawable/egyptianleague"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
