@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class UEFA_champ extends AppCompatActivity {
+public class uefa_champ extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
