@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         uefabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in =new Intent(getApplicationContext(),UEFA_champ.class);
+                Intent in =new Intent(getApplicationContext(),uefa_champ.class);
                 startActivity(in);
                 MatchesDataBase mdb = new MatchesDataBase(getApplicationContext());
                 Match m = new Match("Barca", "Real", "10:00", "uefa");

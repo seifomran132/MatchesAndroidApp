@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class UEFA_champ extends AppCompatActivity {
+public class uefa_champ extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class UEFA_champ extends AppCompatActivity {
         setContentView(R.layout.activity_uefa_champ);
 
         MatchesDataBase obj =new MatchesDataBase(this);
-        UEFA_champ.addtolist add = new UEFA_champ.addtolist(obj.getMatches());
+        uefa_champ.addtolist add = new uefa_champ.addtolist(obj.getMatches());
 
         ArrayList<Match> uefa_Match =new ArrayList<Match>();
 

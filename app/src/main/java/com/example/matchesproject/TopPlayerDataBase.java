@@ -57,6 +57,7 @@ public class TopPlayerDataBase extends SQLiteOpenHelper {
 
     }
 
+
     public ArrayList<PlayersDetails> getGoalsByOrder() {
 
         ArrayList<PlayersDetails> PLayersArr = new ArrayList<>();
@@ -67,19 +68,18 @@ public class TopPlayerDataBase extends SQLiteOpenHelper {
 
         c = myDB.query("topplayer", rowDetails, null, null, null,
                 null, "goals");
-        if(c.moveToFirst()) {
-            do{
-                String PlayerName = c.getString(0);
-                int Goals = c.getInt(1);
-                int Assists = c.getInt(2);
+        c.moveToFirst();
+        do{
+            String PlayerName = c.getString(0);
+            int Goals = c.getInt(1);
+            int Assists = c.getInt(2);
 
-                PlayersDetails tempPlayer = new PlayersDetails(PlayerName, Goals, Assists);
+            PlayersDetails tempPlayer = new PlayersDetails(PlayerName, Goals, Assists);
 
-                PLayersArr.add(tempPlayer);
-
-            }
-            while(c.moveToNext());
+            PLayersArr.add(tempPlayer);
         }
+        while(c.moveToNext());
+
         myDB.close();
         return PLayersArr;
     }
@@ -95,19 +95,19 @@ public class TopPlayerDataBase extends SQLiteOpenHelper {
 
         c1 = myDB.query("topplayer", rowDetails, null, null, null,
                 null, "assits");
-        if(c1.moveToFirst()) {
-            do{
-                String PlayerName = c1.getString(0);
-                int Goals = c1.getInt(1);
-                int Assists = c1.getInt(2);
+        c1.moveToFirst();
+        do{
+            String PlayerName = c1.getString(0);
+            int Goals = c1.getInt(1);
+            int Assists = c1.getInt(2);
 
-                PlayersDetails tempPlayer = new PlayersDetails(PlayerName, Goals, Assists);
+            PlayersDetails tempPlayer = new PlayersDetails(PlayerName, Goals, Assists);
 
-                PLayersArr1.add(tempPlayer);
+            PLayersArr1.add(tempPlayer);
 
-            }
-            while(c1.moveToNext());
         }
+        while(c1.moveToNext());
+
         myDB.close();
         return PLayersArr1;
     }
