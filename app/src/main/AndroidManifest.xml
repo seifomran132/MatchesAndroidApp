@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MatchesProject">
-        <activity android:name=".premier_league"></activity>
+        <activity
+            android:name=".TransferActivity"
+            android:exported="false" />
+        <activity android:name=".premier_league" />
         <activity android:name=".laliga_league" />
         <activity android:name=".egypt_league" />
         <activity android:name=".UEFA_champ" />

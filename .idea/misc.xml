@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ghaly/Documents/GitHub/MatchesAndroidApp/app/src/main/res/layout/activity_add_match.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ghaly/Documents/GitHub/MatchesAndroidApp/app/src/main/res/layout/activity_add_player.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ghaly/Documents/GitHub/MatchesAndroidApp/app/src/main/res/layout/activity_egypt_league.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ghaly/Documents/GitHub/MatchesAndroidApp/app/src/main/res/layout/activity_laliga_league.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ghaly/Documents/GitHub/MatchesAndroidApp/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ghaly/Documents/GitHub/MatchesAndroidApp/app/src/main/res/layout/activity_premier_league.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ghaly/Documents/GitHub/MatchesAndroidApp/app/src/main/res/layout/activity_transfer.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ghaly/Documents/GitHub/MatchesAndroidApp/app/src/main/res/layout/activity_uefa_champ.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ghaly/Documents/GitHub/MatchesAndroidApp/app/src/main/res/layout/activity_view_players.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ghaly/Documents/GitHub/MatchesAndroidApp/app/src/main/res/layout/adapter_matchlist.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
