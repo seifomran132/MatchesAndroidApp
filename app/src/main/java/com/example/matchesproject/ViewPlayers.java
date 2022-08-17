@@ -26,29 +26,39 @@ public class ViewPlayers extends AppCompatActivity {
         Glist.setAdapter(GoalsAdapter);
 
         ArrayAdapter<Object> AssistsAdapter = new ArrayAdapter<Object>
-                (getApplicationContext(), android.R.layout.simple_list_item_2);
+                (getApplicationContext(), android.R.layout.simple_list_item_1);
         Alist.setAdapter(AssistsAdapter);
 
         TopPlayerDataBase players = new TopPlayerDataBase(getApplicationContext());
 
         PlayersDetails pl = new PlayersDetails();
 
-        PlayersDetails p2 = new PlayersDetails("Seif", 10, 3);
-        players.addPlayer(p2);
-
-
 
         //Cursor cur = players.getGoalsAndAssists();
 
-        ArrayList<PlayersDetails> PlayersList = players.getGoalsByOrder();
-        Iterator itr = PlayersList.iterator();
+        ArrayList<PlayersDetails> GoalsList = players.getGoalsByOrder();
+        ArrayList<PlayersDetails> AssitsList = players.getAssitsByOrder();
 
 
-        while(itr.hasNext()) {
-            Object element = itr.next();
-            GoalsAdapter.add(PlayersList.get(0).getPlayerName());
+        int i = GoalsList.size()-1;
+        int j=1;
+        while(i>0) {
+
+            GoalsAdapter.add(j+"\t\t\t"+GoalsList.get(i).getPlayerName() + "\t\t\t\t\t\t\t\t\t\t\t\t\t"
+                    + GoalsList.get(i).getGoals());
+            j++;
+            i--;
         }
 
+        i = AssitsList.size()-1;
+        j=1;
+        while(i>0) {
+
+            AssistsAdapter.add(j+"\t\t\t"+AssitsList.get(i).getPlayerName() + "\t\t\t\t\t\t\t\t\t\t\t\t\t"
+                    + AssitsList.get(i).getAssists());
+            j++;
+            i--;
+        }
 
         /*if(cur != null) {
             while (!cur.isAfterLast()) {
