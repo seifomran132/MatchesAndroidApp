@@ -22,7 +22,7 @@ TransferDataBase transfer;
         transferList.setAdapter(transferAdapter);
 
         transfer = new TransferDataBase(getApplicationContext());
-        ArrayAdapter<Transfere> adapter = transfer.getTransfers();
+        //ArrayAdapter<Transfere> adapter = transfer.getTransfers();
 
     }
 }
