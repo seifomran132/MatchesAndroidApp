@@ -15,7 +15,7 @@
         <activity android:name=".premier_league" />
         <activity android:name=".laliga_league" />
         <activity android:name=".egypt_league" />
-        <activity android:name=".UEFA_champ" />
+        <activity android:name=".uefa_champ" />
         <activity android:name=".addPlayer" />
         <activity
             android:name=".ViewPlayers"
