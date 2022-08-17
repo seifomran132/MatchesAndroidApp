@@ -17,7 +17,6 @@ TransferDataBase transfer;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transfer);
 
-        transferList = (ListView) findViewById(R.id.list_of_transfers);
         transferAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1);
         transferList.setAdapter(transferAdapter);
 

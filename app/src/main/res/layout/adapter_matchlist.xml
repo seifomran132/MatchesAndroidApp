@@ -13,29 +13,26 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_weight="1"
-        android:text="TextView"
-        android:textAlignment="center"
         android:paddingTop="20dp"
-        />
+        android:text="TextView"
+        android:textAlignment="center" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:orientation="vertical"
-        android:padding="10dp"
-        >
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/time"
             android:layout_width="85dp"
             android:layout_height="55dp"
             android:layout_weight="1"
-            android:text="TextView"
             android:background="@color/cardview_dark_background"
-            android:textColor="@color/white"
-            android:textAlignment="center"
             android:paddingTop="5dp"
-            />
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 
@@ -44,11 +41,10 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_weight="1"
-        android:text="TextView"
-        android:paddingRight="20dp"
         android:paddingTop="20dp"
-        android:textAlignment="center"
-        />
+        android:paddingRight="20dp"
+        android:text="TextView"
+        android:textAlignment="center" />
 
 
 </LinearLayout>
