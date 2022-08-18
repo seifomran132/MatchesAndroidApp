@@ -149,4 +149,18 @@ TopPlayerDataBase topDB = new TopPlayerDataBase(getApplicationContext());
 
 
     }
+
+    public void btn_tran(View v){
+        Intent intent=new Intent(MainActivity.this,TransferActivity.class);
+        startActivity(intent);
+    }
+    public void btn_top_players(View v){
+        Intent intent=new Intent(MainActivity.this,TopPlayerDataBase.class);
+        startActivity(intent);
+    }
+
+    public void admin_dash(View v){
+        Intent intent=new Intent(MainActivity.this,addMatch.class);
+        startActivity(intent);
+    }
 }

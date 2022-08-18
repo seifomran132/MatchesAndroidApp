@@ -129,4 +129,54 @@
         app:layout_constraintVertical_bias="0.096"
         app:srcCompat="@drawable/egyptianleague"
         tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="110dp"
+        android:layout_height="68dp"
+        android:background="@color/black"
+        android:onClick="btn_tran"
+        android:text="Transfers Center"
+        android:textColor="#FFFBFB"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.982"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uefatext"
+        app:layout_constraintVertical_bias="0.287" />
+
+    <Button
+        android:id="@+id/topPlayers"
+        android:layout_width="110dp"
+        android:layout_height="68dp"
+        android:background="@color/black"
+        android:onClick="btn_top_players"
+        android:text="Top Players"
+        android:textColor="#FFFBFB"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.661"
+        app:layout_constraintStart_toEndOf="@+id/adminDashboard"
+        app:layout_constraintTop_toBottomOf="@+id/uefatext"
+        app:layout_constraintVertical_bias="0.288" />
+
+    <Button
+        android:id="@+id/adminDashboard"
+        android:layout_width="110dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/black"
+        android:onClick="admin_dash"
+        android:text="Admin Dashboard"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/latext"
+        app:layout_constraintVertical_bias="0.259" />
 </androidx.constraintlayout.widget.ConstraintLayout>
