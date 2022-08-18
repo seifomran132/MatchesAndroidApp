@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MatchesProject">
-
+        <activity android:name=".AddTransfer"></activity>
+        <activity android:name=".AdminDashboard" />
+        <activity android:name=".AdminLogin" />
         <activity
             android:name=".Transfere_ListView"
             android:exported="false" />

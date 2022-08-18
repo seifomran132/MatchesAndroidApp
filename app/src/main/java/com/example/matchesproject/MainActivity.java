@@ -160,7 +160,7 @@ TopPlayerDataBase topDB = new TopPlayerDataBase(getApplicationContext());
     }
 
     public void admin_dash(View v){
-        Intent intent=new Intent(MainActivity.this,addMatch.class);
+        Intent intent=new Intent(MainActivity.this, AdminLogin.class);
         startActivity(intent);
     }
 }

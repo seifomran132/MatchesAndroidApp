@@ -4,100 +4,99 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".addPlayer">
-
-
-    <EditText
-        android:id="@+id/et_assits"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_assits" />
+    tools:context=".AddTransfer">
 
     <TextView
-        android:id="@+id/tv_assits"
+        android:id="@+id/tv_admin_AddTransfer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Player Assists"
+        android:layout_marginTop="50dp"
+        android:text="Add Transfer"
+        android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_goals"
-        android:textSize="24dp"
-        />
-
-    <TextView
-        android:id="@+id/tv_addplayer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="You can add player details here"
-        android:textSize="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.136" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/et_playername"
+        android:id="@+id/et_admin_PlayerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_playername" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_admin_AddTransfer" />
 
     <EditText
-        android:id="@+id/et_goals"
+        android:id="@+id/et_admin_NewClub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="textPersonName"
+        android:text="New Club"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_goals" />
+        app:layout_constraintTop_toBottomOf="@+id/et_admin_PlayerName" />
 
-    <TextView
-        android:id="@+id/tv_goals"
+    <EditText
+        android:id="@+id/et_admin_OldClub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Player Goals"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Old Club"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_playername"
-        android:textSize="24dp"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/et_admin_NewClub" />
 
-    <TextView
-        android:id="@+id/tv_playername"
+    <EditText
+        android:id="@+id/et_admin_TransferCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:text="Player Name"
-        android:textSize="24dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Transfer Cost"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_addplayer" />
+        app:layout_constraintTop_toBottomOf="@+id/et_admin_OldClub" />
+
+    <EditText
+        android:id="@+id/et_admin_NewSalary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="New Salary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_admin_TransferCost" />
+
+    <EditText
+        android:id="@+id/et_admin_ContractTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Contract Date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_admin_NewSalary" />
 
     <Button
-        android:id="@+id/addPlayerBtn"
+        android:id="@+id/btn_admin_addTransfer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Player"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="50dp"
+        android:text="Add Transfer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_assits"
-        app:layout_constraintVertical_bias="0.242" />
+        app:layout_constraintTop_toBottomOf="@+id/et_admin_ContractTime" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

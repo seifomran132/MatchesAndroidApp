@@ -46,7 +46,7 @@ public class CustomTransferAdapter extends ArrayAdapter<Transfere> {
 
         tv_playerName.setText(playerName);
         tv_oldClub.setText("From: " + oldClub);
-        tv_newClub.setText("To +" + newClub);
+        tv_newClub.setText("To: " + newClub);
         tv_newSalary.setText( "Salary: " + String.valueOf(newSalary));
         tv_contractDate.setText("Contact ends: " + contractDate);
 
