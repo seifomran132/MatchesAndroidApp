@@ -9,9 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MatchesProject">
-        <activity
-            android:name=".BottomNavigation"
-            android:exported="false" />
+
         <activity
             android:name=".Transfere_ListView"
             android:exported="false" />

@@ -151,11 +151,11 @@ TopPlayerDataBase topDB = new TopPlayerDataBase(getApplicationContext());
     }
 
     public void btn_tran(View v){
-        Intent intent=new Intent(MainActivity.this,TransferActivity.class);
+        Intent intent=new Intent(MainActivity.this,Transfere_ListView.class);
         startActivity(intent);
     }
     public void btn_top_players(View v){
-        Intent intent=new Intent(MainActivity.this,TopPlayerDataBase.class);
+        Intent intent=new Intent(MainActivity.this,ViewPlayers.class);
         startActivity(intent);
     }
 
