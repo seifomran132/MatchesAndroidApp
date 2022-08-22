@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class addPlayer extends AppCompatActivity {
 
@@ -25,12 +26,25 @@ public class addPlayer extends AppCompatActivity {
         addPlayerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+
                 String myPlayerName = playerName.getText().toString();
                 int myPlayerGoals = Integer.parseInt(playerGoals.getText().toString());
                 int myPlayerAssists = Integer.parseInt(playerAssists.getText().toString());
-                PlayersDetails myPlayer = new PlayersDetails(myPlayerName, myPlayerGoals, myPlayerAssists);
-                topPlayerDB.addPlayer(myPlayer);
-                System.out.println(topPlayerDB.getAssitsByOrder());
+
+
+
+                if(!myPlayerName.isEmpty() && myPlayerGoals == (int)myPlayerGoals && myPlayerAssists == (int)myPlayerAssists) {
+                    PlayersDetails myPlayer = new PlayersDetails(myPlayerName, myPlayerGoals, myPlayerAssists);
+                    topPlayerDB.addPlayer(myPlayer);
+                    Toast.makeText(getApplicationContext(), "Player Added", Toast.LENGTH_LONG).show();
+
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "Please Enter All Data", Toast.LENGTH_LONG).show();
+
+                }
 
             }
         });

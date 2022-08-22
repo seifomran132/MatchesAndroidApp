@@ -36,28 +36,34 @@ public class ViewPlayers extends AppCompatActivity {
 
         //Cursor cur = players.getGoalsAndAssists();
 
-        ArrayList<PlayersDetails> GoalsList = players.getGoalsByOrder();
-        ArrayList<PlayersDetails> AssitsList = players.getAssitsByOrder();
+        try {
+            ArrayList<PlayersDetails> GoalsList = players.getGoalsByOrder();
+            ArrayList<PlayersDetails> AssitsList = players.getAssitsByOrder();
 
 
-        int i = GoalsList.size()-1;
-        int j=1;
-        while(i>0) {
+            int i = GoalsList.size()-1;
+            int j=1;
+            while(i>0) {
 
-            GoalsAdapter.add(j+"\t\t\t"+GoalsList.get(i).getPlayerName() + "\t\t\t\t\t\t\t\t\t\t\t\t\t"
-                    + GoalsList.get(i).getGoals());
-            j++;
-            i--;
+                GoalsAdapter.add(j+"\t\t\t"+GoalsList.get(i).getPlayerName() + "\t\t\t\t\t\t\t\t\t\t\t\t\t"
+                        + GoalsList.get(i).getGoals());
+                j++;
+                i--;
+            }
+
+            i = AssitsList.size()-1;
+            j=1;
+            while(i>0) {
+
+                AssistsAdapter.add(j+"\t\t\t"+AssitsList.get(i).getPlayerName() + "\t\t\t\t\t\t\t\t\t\t\t\t\t"
+                        + AssitsList.get(i).getAssists());
+                j++;
+                i--;
+            }
         }
+        catch(Error err) {
+            Toast.makeText(getApplicationContext(), err.getMessage(), Toast.LENGTH_LONG).show();
 
-        i = AssitsList.size()-1;
-        j=1;
-        while(i>0) {
-
-            AssistsAdapter.add(j+"\t\t\t"+AssitsList.get(i).getPlayerName() + "\t\t\t\t\t\t\t\t\t\t\t\t\t"
-                    + AssitsList.get(i).getAssists());
-            j++;
-            i--;
         }
 
         /*if(cur != null) {

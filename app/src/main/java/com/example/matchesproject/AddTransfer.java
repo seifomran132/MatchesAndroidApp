@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class AddTransfer extends AppCompatActivity {
 
@@ -35,8 +36,19 @@ public class AddTransfer extends AppCompatActivity {
                 String myOldClub = oldClub.getText().toString();
                 float myTransferCost = Float.parseFloat(transferCost.getText().toString());
                 String myContractTime = contractTime.getText().toString();
-                Transfere tempTransfer = new Transfere(myPlayerName, myNewClub, myOldClub, myTransferCost, myNewSalary, myContractTime);
-                transferDataBase.createTransfer(tempTransfer);
+
+                if(!myPlayerName.isEmpty() && !myNewClub.isEmpty() && !myOldClub.isEmpty() && !myContractTime.isEmpty()) {
+                    Transfere tempTransfer = new Transfere(myPlayerName, myNewClub, myOldClub, myTransferCost, myNewSalary, myContractTime);
+                    transferDataBase.createTransfer(tempTransfer);
+                    Toast.makeText(getApplicationContext(), "Transfer Added", Toast.LENGTH_LONG).show();
+
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "Please Enter All Data", Toast.LENGTH_LONG).show();
+
+                }
+
+
 
 
             }

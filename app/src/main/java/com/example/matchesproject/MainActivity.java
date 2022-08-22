@@ -30,11 +30,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                MatchesDataBase mdb = new MatchesDataBase(getApplicationContext());
-                Match m = new Match("Barca", "Real", "10:00", "premier league");
-                mdb.createMatch(m);
-
-                Intent in =new Intent(getApplicationContext(),premier_league.class);
+                                Intent in =new Intent(getApplicationContext(),premier_league.class);
                 startActivity(in);
             }
         });
@@ -44,9 +40,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent in =new Intent(getApplicationContext(),egypt_league.class);
                 startActivity(in);
-                MatchesDataBase mdb = new MatchesDataBase(getApplicationContext());
-                Match m = new Match("Barca", "Real", "10:00", "egyptian league");
-                mdb.createMatch(m);
+
             }
         });
 
@@ -55,9 +49,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent in =new Intent(getApplicationContext(),laliga_league.class);
                 startActivity(in);
-                MatchesDataBase mdb = new MatchesDataBase(getApplicationContext());
-                Match m = new Match("Barca", "Real", "10:00", "laliga");
-                mdb.createMatch(m);
+
             }
         });
 
@@ -66,86 +58,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent in =new Intent(getApplicationContext(),uefa_champ.class);
                 startActivity(in);
-                MatchesDataBase mdb = new MatchesDataBase(getApplicationContext());
-                Match m = new Match("Barca", "Real", "10:00", "uefa");
-                mdb.createMatch(m);
-            }
-        });
-
-
-
-
-
-
-
-
-
-
-/*
-
-TopPlayerDataBase topDB = new TopPlayerDataBase(getApplicationContext());
-
-        Button viewBtn = findViewById(R.id.viewMatchesBtn);
-        Button addBtn = findViewById(R.id.addBtn);
-
-        viewBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                ArrayList<PlayersDetails> players = new ArrayList<>();
-                players = topDB.getGoalsByOrder();
-
-                System.out.println(players);
-
 
             }
         });
 
 
-        addBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                PlayersDetails p1 = new PlayersDetails("Seif", 20, 6);
-                topDB.addPlayer(p1);
 
 
 
-            }
-        });
-
-        Intent myIntent = new Intent(this, addPlayer.class);
-        startActivity(myIntent);
-
-        MatchesDataBase mdb = new MatchesDataBase(getApplicationContext());
 
 
-        Button viewBtn = findViewById(R.id.viewMatchesBtn);
-        Button addBtn = findViewById(R.id.addBtn);
-
-        viewBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                ArrayList<Match> matchesList = mdb.getMatches();
-
-                System.out.println(matchesList);
-
-            }
-        });
 
 
-        addBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Match newMatch = new Match("barca", "real", "10:00", "spanish");
-                mdb.createMatch(newMatch);
-
-            }
-        });
-*/
 
 
     }

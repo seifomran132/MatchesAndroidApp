@@ -43,6 +43,8 @@ public class addMatch extends AppCompatActivity {
                 if(!fn.isEmpty() && !sn.isEmpty() && !mt.isEmpty() && !ch.isEmpty()) {
                     Match addedMatch = new Match(fn, sn, mt, ch);
                     matchesDB.createMatch(addedMatch);
+                    Toast.makeText(getApplicationContext(), "Match Added", Toast.LENGTH_LONG).show();
+
                 }
                 else {
                     Toast.makeText(getApplicationContext(), "Please Enter All Data", Toast.LENGTH_LONG).show();
